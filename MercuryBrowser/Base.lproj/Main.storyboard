@@ -19,19 +19,33 @@
                                 <rect key="frame" x="10" y="54" width="394" height="798"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="mtc-03-4qW" customClass="ImageCell" customModule="MercuryBrowser" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="394" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="250" id="mtc-03-4qW" customClass="ImageCell" customModule="MercuryBrowser" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="394" height="250"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mtc-03-4qW" id="2DI-Qm-TeG">
-                                            <rect key="frame" x="0.0" y="0.0" width="394" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Xp-gp-CjA">
-                                                    <rect key="frame" x="91" y="-30" width="240" height="201"/>
+                                                    <rect key="frame" x="91" y="-30" width="240" height="406"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="200" id="Q0r-zq-Rff"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xki-AC-i9v">
+                                                    <rect key="frame" x="20" y="218" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kPT-o9-hXL">
+                                                    <rect key="frame" x="339" y="216" width="42" height="22"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="5Xp-gp-CjA" secondAttribute="trailing" constant="63" id="4Ne-a0-iKF"/>
@@ -42,6 +56,8 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="imageHolder" destination="5Xp-gp-CjA" id="Ux7-W5-XPn"/>
+                                            <outlet property="leftLabel" destination="xki-AC-i9v" id="hb2-sd-dCN"/>
+                                            <outlet property="rightLabel" destination="kPT-o9-hXL" id="q7k-DN-h32"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -57,12 +73,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="gM0-Lf-Dkb" id="Kc6-F0-aGQ"/>
+                        <outlet property="tableView" destination="gM0-Lf-Dkb" id="Qbk-FA-K9F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="129"/>
+            <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
         </scene>
     </scenes>
 </document>

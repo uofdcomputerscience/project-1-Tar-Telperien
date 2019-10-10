@@ -12,6 +12,8 @@ class ImageCell: UITableViewCell {
 
     @IBOutlet weak var imageHolder: UIImageView!
     
-
-
+    @IBOutlet weak var leftLabel: UILabel!
+    
+    @IBOutlet weak var rightLabel: UILabel!
+    
 }

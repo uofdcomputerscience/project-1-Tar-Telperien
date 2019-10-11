@@ -40,13 +40,12 @@ extension ViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ImageCell")
         if let imgCell = cell as? ImageCell {
             imageFetcher.getImage(urlString: mercuryObjects[indexPath.item].url) { (image, url) in
-                imgCell.imageHolder.image = image //set cell's image view to the image I just got
-                imgCell.leftLabel.text = self.mercuryObjects[indexPath.item].name
-                imgCell.rightLabel.text = self.mercuryObjects[indexPath.item].type
+                DispatchQueue.main.async{
+                    imgCell.imageHolder.image = image //set cell's image view to the image I just got
+                    imgCell.leftLabel.text = self.mercuryObjects[indexPath.item].name
+                    imgCell.rightLabel.text = self.mercuryObjects[indexPath.item].type
+                }
             }
-        }
-        if cell == nil {
-            tableView.register(ImageCell.self, forCellReuseIdentifier: "ImageCell")
         }
         return cell!
     }

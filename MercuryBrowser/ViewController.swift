@@ -45,6 +45,9 @@ extension ViewController: UITableViewDataSource {
                 imgCell.rightLabel.text = self.mercuryObjects[indexPath.item].type
             }
         }
+        if cell == nil {
+            tableView.register(ImageCell.self, forCellReuseIdentifier: "ImageCell")
+        }
         return cell!
     }
 }
